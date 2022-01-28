@@ -5,27 +5,23 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class ASHardware {
-    DcMotor frontLeft,frontRight,backLeft,backRight;
+    DcMotor Left,Right,Middle;
 
     public void init(HardwareMap hardwareMap) {
-        frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
-        frontRight = hardwareMap.get(DcMotor.class, "frontRight");
-        frontLeft = hardwareMap.get(DcMotor.class, "backLeft");
-        frontLeft = hardwareMap.get(DcMotor.class, "backRight");
+        Left = hardwareMap.get(DcMotor.class, "frontLeft");
+        Right = hardwareMap.get(DcMotor.class, "frontRight");
+        Middle = hardwareMap.get(DcMotor.class, "backLeft");
 
-        frontLeft.setDirection(DcMotor.Direction.REVERSE);
-        frontRight.setDirection(DcMotor.Direction.FORWARD);
-        backLeft.setDirection(DcMotor.Direction.REVERSE);
-        backRight.setDirection(DcMotor.Direction.FORWARD);
+        Left.setDirection(DcMotor.Direction.FORWARD);
+        Right.setDirection(DcMotor.Direction.REVERSE);
+        Middle.setDirection(DcMotor.Direction.FORWARD);
 
-        frontLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        frontRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        backLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        backRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        Left.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        Right.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        Middle.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        frontLeft.setPower(0);
-        frontRight.setPower(0);
-        backLeft.setPower(0);
-        backRight.setPower(0);
+        Left.setPower(0);
+        Right.setPower(0);
+        Left.setPower(0);
     }
 }
