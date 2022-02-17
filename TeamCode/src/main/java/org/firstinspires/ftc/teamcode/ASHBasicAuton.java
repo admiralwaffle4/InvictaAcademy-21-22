@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-@Autonomous(name="Auton Test",group="Test")
+@Autonomous(name="Auton Test",group="Tests")
 public class ASHBasicAuton extends LinearOpMode {
     ASHardware ASH = new ASHardware();
     DcMotor[] wheels = new DcMotor[3];
