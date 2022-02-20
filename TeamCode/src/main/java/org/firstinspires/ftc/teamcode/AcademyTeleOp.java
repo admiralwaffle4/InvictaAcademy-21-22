@@ -29,15 +29,20 @@ public class AcademyTeleOp extends LinearOpMode {
         //wait for the driver to press the play button
         waitForStart();
 
+        //turn motion on
+        left.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        right.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        middle.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
         while (opModeIsActive()) {
             //get the values from gamepad
             drive = gamepad1.left_stick_y;
-            strafe = gamepad1.left_stick_x;
-            turn = gamepad1.right_stick_x;
+            turn = gamepad1.left_stick_x;
+            strafe = -gamepad1.right_stick_x;
 
             //make sure the values aren't outside of the range
-            leftPower = Range.clip(drive + strafe - turn, -1.0, 1.0) ;
-            rightPower = Range.clip(drive - strafe + turn, -1.0, 1.0) ;
+            leftPower = Range.clip(drive - turn, -1.0, 1.0) ;
+            rightPower = Range.clip(drive + turn, -1.0, 1.0) ;
             middlePower = Range.clip(strafe, -1.0, 1.0);
 
             //power the motors

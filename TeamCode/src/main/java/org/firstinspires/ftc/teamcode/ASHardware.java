@@ -8,12 +8,12 @@ public class ASHardware {
     DcMotor Left,Right,Middle;
 
     public void init(HardwareMap hardwareMap) {
-        Left = hardwareMap.get(DcMotor.class, "frontLeft");
-        Right = hardwareMap.get(DcMotor.class, "frontRight");
-        Middle = hardwareMap.get(DcMotor.class, "backLeft");
+        Left = hardwareMap.get(DcMotor.class, "left");
+        Right = hardwareMap.get(DcMotor.class, "right");
+        Middle = hardwareMap.get(DcMotor.class, "middle");
 
-        Left.setDirection(DcMotor.Direction.FORWARD);
-        Right.setDirection(DcMotor.Direction.REVERSE);
+        Left.setDirection(DcMotor.Direction.REVERSE);
+        Right.setDirection(DcMotor.Direction.FORWARD);
         Middle.setDirection(DcMotor.Direction.FORWARD);
 
         Left.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -22,7 +22,7 @@ public class ASHardware {
 
         Left.setPower(0);
         Right.setPower(0);
-        Left.setPower(0);
+        Middle.setPower(0);
 
 
     }
