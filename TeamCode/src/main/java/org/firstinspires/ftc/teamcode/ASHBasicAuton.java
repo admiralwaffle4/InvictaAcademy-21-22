@@ -29,7 +29,6 @@ public class ASHBasicAuton extends LinearOpMode {
 
         //tells the motors to stop and reset itself
         for (DcMotor wheel : wheels){
-            wheel.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
             wheel.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
             wheel.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         }
