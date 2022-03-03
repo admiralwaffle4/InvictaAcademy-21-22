@@ -56,6 +56,15 @@ public class AcademyTeleOp extends LinearOpMode {
             telemetry.addData("Motors", "left (%.2f), right (%.2f), middle (%.2f)", leftPower, rightPower, middlePower);
             telemetry.update();
 
+            //alt drive
+            float forward = -gamepad1.left_trigger;
+            float backward = -gamepad1.right_trigger;
+
+            double power = forward - backward;
+
+            left.setPower(power);
+            right.setPower(power);
+
         }
     }
 }

@@ -39,10 +39,12 @@ public class TestBotHardware {
         backRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         spin.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        frontRight.setDirection(DcMotor.Direction.FORWARD);
+
+        frontLeft.setDirection(DcMotor.Direction.REVERSE);
         backLeft.setDirection(DcMotor.Direction.REVERSE);
         frontRight.setDirection(DcMotor.Direction.FORWARD);
-        backLeft.setDirection(DcMotor.Direction.REVERSE);
+        backRight.setDirection(DcMotor.Direction.FORWARD);
+        spin.setDirection(DcMotor.Direction.FORWARD);
 
         //die
 
